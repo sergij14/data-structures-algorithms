@@ -31,4 +31,17 @@ export class HashTable {
     }
     return undefined;
   }
+
+  keys() {
+    if (!this.data.length) {
+      return undefined;
+    }
+    const keysArray = [];
+    for (let i = 0; i < this.data.length; i++) {
+      if (this.data[i]) {
+        keysArray.push(this.data[i][0][0]);
+      }
+    }
+    return keysArray;
+  }
 }
