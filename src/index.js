@@ -11,8 +11,8 @@ import { LinkedList } from "./linked-lists";
 
 // LINKED LISTS
 
-const myLinkedList = new LinkedList(10);
-myLinkedList.append(5);
-myLinkedList.prepend(45);
+// const myLinkedList = new LinkedList(10);
+// myLinkedList.append(5);
+// myLinkedList.prepend(45);
 
-console.log(myLinkedList);
+// console.log(myLinkedList);
