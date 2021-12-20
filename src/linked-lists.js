@@ -16,4 +16,13 @@ export class LinkedList {
     this.tail = newNode;
     this.length++;
   }
+  prepend(value) {
+    const newNode = {
+      value: value,
+      next: null,
+    };
+    newNode.next = this.head;
+    this.head = newNode;
+    this.length++;
+  }
 }
