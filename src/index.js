@@ -1,5 +1,6 @@
-import { HashTable } from "./hash-tables";
-import { LinkedList } from "./linked-lists";
+import { HashTable } from "./hash-table";
+import { LinkedList } from "./linked-list";
+import { Stack } from "./stack";
 
 // HASH TABLES
 
@@ -16,3 +17,18 @@ import { LinkedList } from "./linked-lists";
 // myLinkedList.prepend(45);
 
 // console.log(myLinkedList);
+
+// STACKS
+
+// const myStack = new Stack();
+// myStack.push("google");
+// myStack.push("twitter");
+// myStack.push("youtube");
+
+// console.log(myStack);
+
+// myStack.pop();
+
+// console.log(myStack);
+
+//QUEUES
