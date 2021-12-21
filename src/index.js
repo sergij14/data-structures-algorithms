@@ -1,14 +1,13 @@
-import { HashTable } from "./hash-table";
+import { HashTable, HashTable_2 } from "./hash-table";
 import { LinkedList } from "./linked-list";
 import { Stack } from "./stack";
 
 // HASH TABLES
 
-// const myHashTable = new HashTable(50);
-// myHashTable.set("apples", 1000);
-// myHashTable.set("grapes", 1000);
-// myHashTable.get("apples");
-// console.log(myHashTable, myHashTable.keys());
+const myHashTable = new HashTable_2(50);
+myHashTable.set("apples", 1000);
+myHashTable.set("grapes", 1000);
+console.log(myHashTable, myHashTable.get("apples"));
 
 // LINKED LISTS
 
