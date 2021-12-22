@@ -31,3 +31,33 @@ import { Stack } from "./data-structures/stack";
 // console.log(myStack);
 
 //QUEUES
+
+// ALGO
+
+// let counter = 0;
+
+// function recursiveFn() {
+//   if (counter > 3) {
+//     return "done";
+//   }
+
+//   counter++;
+//   return recursiveFn();
+// }
+// console.log(recursiveFn());
+
+function findFactorialRecursive(num) {
+  if (num === 2) {
+    return 2;
+  }
+  return num * findFactorialRecursive(num - 1);
+}
+
+function findFactorialIterative(num) {
+  let answ = 1;
+  for (let i = 1; i <= num; i++) {
+    answ = answ * i;
+  }
+  return answ;
+}
+console.log(findFactorialRecursive(2));
