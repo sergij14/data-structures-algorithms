@@ -27,9 +27,29 @@ export class BinarySearchTree {
           currentNode = currentNode.left;
         } else {
           //right
+          if (!currentNode.right) {
+            currentNode.right = newNode;
+            return this;
+          }
+          currentNode = currentNode.right;
         }
       }
     }
   }
-  lookup(value) {}
+  lookup(value) {
+    if (!this.root) {
+      return false;
+    }
+    let currentNode = this.root;
+    while (currentNode) {
+      if (value < currentNode.value) {
+        currentNode = currentNode.left;
+      } else if (value > currentNode.value) {
+        currentNode = currentNode.right;
+      } else if (currentNode.value === value) {
+        return currentNode;
+      }
+      return false;
+    }
+  }
 }
