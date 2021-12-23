@@ -62,20 +62,37 @@ import { Stack } from "./data-structures/stack";
 // }
 // console.log(findFactorialRecursive(2));
 
-const nums = [2, 54, 76, 34, 6];
+// const nums = [45, 65, 23, 56, 3, 6, 3];
 
-function bubleSort(array) {
-  for (let i = 0; i < array.length; i++) {
-    for (let j = 0; j < array.length; j++) {
-      if (array[j] > array[j + 1]) {
-        //swap
-        let temp = array[j];
-        array[j] = array[j + 1];
-        array[j + 1] = temp;
-      }
-    }
-  }
-  return array;
-}
+// function bubleSort(array) {
+//   for (let i = 0; i < array.length; i++) {
+//     for (let j = 0; j < array.length; j++) {
+//       if (array[j] > array[j + 1]) {
+//         let temp = array[j];
+//         array[j] = array[j + 1];
+//         array[j + 1] = temp;
+//       }
+//     }
+//   }
+//   return [...new Set(array)];
+// }
 
-console.log(bubleSort(nums));
+// function selectionSort(array) {
+//   for (let i = 0; i < array.length; i++) {
+//     let min = i;
+//     let temp = array[i];
+//     for (let j = i + 1; j < array.length; j++) {
+//       if (array[j] < array[min]) {
+//         min = j;
+//       }
+//     }
+//     array[i] = array[min];
+//     array[min] = temp;
+//   }
+// }
+
+// console.log(bubleSort(nums));
+
+const letters = ["a", "b", "c", "g"];
+
+console.log(letters.includes("a"));
