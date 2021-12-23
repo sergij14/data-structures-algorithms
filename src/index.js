@@ -46,18 +46,36 @@ import { Stack } from "./data-structures/stack";
 // }
 // console.log(recursiveFn());
 
-function findFactorialRecursive(num) {
-  if (num === 2) {
-    return 2;
+// function findFactorialRecursive(num) {
+//   if (num === 2) {
+//     return 2;
+//   }
+//   return num * findFactorialRecursive(num - 1);
+// }
+
+// function findFactorialIterative(num) {
+//   let answ = 1;
+//   for (let i = 1; i <= num; i++) {
+//     answ = answ * i;
+//   }
+//   return answ;
+// }
+// console.log(findFactorialRecursive(2));
+
+const nums = [2, 54, 76, 34, 6];
+
+function bubleSort(array) {
+  for (let i = 0; i < array.length; i++) {
+    for (let j = 0; j < array.length; j++) {
+      if (array[j] > array[j + 1]) {
+        //swap
+        let temp = array[j];
+        array[j] = array[j + 1];
+        array[j + 1] = temp;
+      }
+    }
   }
-  return num * findFactorialRecursive(num - 1);
+  return array;
 }
 
-function findFactorialIterative(num) {
-  let answ = 1;
-  for (let i = 1; i <= num; i++) {
-    answ = answ * i;
-  }
-  return answ;
-}
-console.log(findFactorialRecursive(2));
+console.log(bubleSort(nums));
