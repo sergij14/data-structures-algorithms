@@ -1,3 +1,19 @@
+// Linked List
+// Compared to Array:
+// Linked lists does not have indexes.
+// Arrays are in contiguous places in memory
+// Linked lists could all over the place.
+// Linked lists have head(points to the first item) and tail(points to the last item)
+// Each item points to the next to the next..., and last one points to null.
+
+////////////////////////////////////////////////////////////////////
+
+// operation on linked lists
+
+// adding to the end: number of steps is the same every time. - O(1)
+// removing the last item - 0(n)
+
+
 class Node {
   constructor(value) {
     this.value = value;
