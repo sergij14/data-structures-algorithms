@@ -6,17 +6,19 @@
 // pop - removing from the end
 
 export class Queue {
-  constructor(){
-    this.data = []
+  constructor() {
+    this.data = [];
   }
 
-  add(el){
-    this.data.unshift(el)
+  add(el) {
+    this.data.unshift(el);
   }
 
-  remove(){
-    this.data.pop()
+  remove() {
+    return this.data.pop();
+  }
+
+  peek(){
+    return this.data[this.data.length - 1]
   }
 }
-
-

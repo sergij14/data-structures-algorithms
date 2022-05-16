@@ -8,4 +8,4 @@ queue.add("first");
 queue.add("last");
 queue.add("last +");
 queue.remove() //first removed
-console.log(queue);
+console.log(queue.peek()); //returns 'last'
