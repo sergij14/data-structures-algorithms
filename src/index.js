@@ -1,3 +1,4 @@
+import { LinkedList, Node } from "./data-structures/linked-list";
 import { Queue } from "./data-structures/queue";
 
 // Queues
@@ -30,4 +31,13 @@ function weave(src1, src2){
     return q
 }
 
-console.log(weave(queue1, queue2))
+// console.log(weave(queue1, queue2))
+
+
+// Linked list
+
+const list = new LinkedList();
+list.insertFirst(5)
+list.insertFirst(3)
+
+console.log(list.size());
