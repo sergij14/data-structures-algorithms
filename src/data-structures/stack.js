@@ -2,13 +2,13 @@
 
 // FILO - first in last out
 
-class Stack {
+export class Stack {
   constructor() {
     this.data = [];
   }
 
-  add(el) {
-    this.data.push(el);
+  add(record) {
+    this.data.push(record);
   }
 
   remove() {

@@ -40,4 +40,4 @@ const list = new LinkedList();
 list.insertFirst(5)
 list.insertFirst(3)
 
-console.log(list.size());
+console.log(list.getLast());

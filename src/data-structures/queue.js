@@ -10,15 +10,15 @@ export class Queue {
     this.data = [];
   }
 
-  add(el) {
-    this.data.unshift(el);
+  add(record) {
+    this.data.unshift(record);
   }
 
   remove() {
     return this.data.pop();
   }
 
-  peek(){
-    return this.data[this.data.length - 1]
+  peek() {
+    return this.data[this.data.length - 1];
   }
 }

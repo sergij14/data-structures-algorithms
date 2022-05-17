@@ -6,6 +6,8 @@
 // Linked lists have head(points to the first item) and tail(points to the last item)
 // Each item points to the next to the next..., and last one points to null.
 
+import { isThisTypeNode } from "typescript";
+
 ////////////////////////////////////////////////////////////////////
 
 // operation on linked lists
@@ -35,15 +37,34 @@ export class LinkedList {
     }
   }
 
-  size(){
+  size() {
     let counter = 0;
     let node = this.head;
 
-    while(node){
+    while (node) {
       counter++;
-      node = node.next
+      node = node.next;
     }
 
     return counter;
+  }
+
+  getFirst() {
+    return this.head;
+  }
+
+  getLast() {
+    if (!this.head) {
+      return null;
+    }
+
+    let node = this.head;
+
+    while (node) {
+      if (!node.next) {
+        return node;
+      }
+      node = node.next;
+    }
   }
 }
