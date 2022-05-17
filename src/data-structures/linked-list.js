@@ -6,8 +6,6 @@
 // Linked lists have head(points to the first item) and tail(points to the last item)
 // Each item points to the next to the next..., and last one points to null.
 
-import { isThisTypeNode } from "typescript";
-
 ////////////////////////////////////////////////////////////////////
 
 // operation on linked lists
