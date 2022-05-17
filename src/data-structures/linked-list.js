@@ -37,6 +37,16 @@ export class LinkedList {
     }
   }
 
+  insertLast(data) {
+    const last = this.getLast();
+    const newNode = new Node(data);
+    if (last) {
+      last.next = newNode;
+    } else {
+      this.head = newNode;
+    }
+  }
+
   size() {
     let counter = 0;
     let node = this.head;
@@ -80,19 +90,19 @@ export class LinkedList {
   }
 
   removeLast() {
-    if(!this.head){
-      return
+    if (!this.head) {
+      return;
     }
-    if(!this.head.next){
+    if (!this.head.next) {
       this.head = null;
       return;
     }
-    
+
     let right = this.head;
     let left = null;
 
     while (right) {
-      if(!right.next){
+      if (!right.next) {
         left.next = null;
       }
       left = right;
