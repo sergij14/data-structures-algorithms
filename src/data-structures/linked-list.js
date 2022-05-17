@@ -78,4 +78,25 @@ export class LinkedList {
     }
     this.head = this.head.next;
   }
+
+  removeLast() {
+    if(!this.head){
+      return
+    }
+    if(!this.head.next){
+      this.head = null;
+      return;
+    }
+    
+    let right = this.head;
+    let left = null;
+
+    while (right) {
+      if(!right.next){
+        left.next = null;
+      }
+      left = right;
+      right = right.next;
+    }
+  }
 }
