@@ -37,7 +37,9 @@ function weave(src1, src2){
 // Linked list
 
 const list = new LinkedList();
+// 3 --> 5 --> 10
 list.insertFirst(5)
 list.insertFirst(3)
 list.insertLast(10);
-console.log(list.getAt(3));
+console.log(list);
+console.log(list.removeAt(1));

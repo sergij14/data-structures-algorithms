@@ -81,7 +81,7 @@ export class LinkedList {
   }
 
   getAt(index) {
-    if(!this.head){
+    if (!this.head) {
       return null;
     }
 
@@ -90,13 +90,31 @@ export class LinkedList {
 
     while (node) {
       if (counter === index) {
-        return node.data;
+        return node;
       }
       node = node.next;
       counter++;
     }
 
     return null;
+  }
+
+  removeAt(index) {
+    if (!this.head) {
+      return;
+    }
+    
+    if(index === 0){
+      this.head = this.head.next
+    }
+
+    const prevNode = this.getAt(index - 1);
+
+    if(!prevNode || !prevNode.next) {
+      return;
+    }
+
+    prevNode.next = prevNode.next.next;
   }
 
   removeFirst() {
