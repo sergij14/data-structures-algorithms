@@ -6,14 +6,7 @@
 // Linked lists have head(points to the first item) and tail(points to the last item)
 // Each item points to the next to the next..., and last one points to null.
 
-import { nodeModuleNameResolver } from "typescript";
-
 ////////////////////////////////////////////////////////////////////
-
-// operation on linked lists
-
-// adding to the end: number of steps is the same every time. - O(1)
-// removing the last item - 0(n)
 
 export class Node {
   constructor(data, next = null) {
