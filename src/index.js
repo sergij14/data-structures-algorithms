@@ -42,4 +42,4 @@ list.insertFirst(5)
 list.insertFirst(3)
 list.insertLast(10);
 list.insertAt(16, 4)
-console.log(list);
+list.forEach((node, i) => console.log(i, node.data))

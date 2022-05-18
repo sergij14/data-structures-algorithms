@@ -80,6 +80,17 @@ export class LinkedList {
     this.head = null;
   }
 
+  forEach(fn) {
+    let node = this.head;
+    let counter = 0;
+
+    while (node) {
+      fn(node, counter);
+      node = node.next;
+      counter++;
+    }
+  }
+
   getAt(index) {
     if (!this.head) {
       return null;
@@ -118,7 +129,7 @@ export class LinkedList {
   }
 
   insertAt(data, index) {
-    if(!this.head){
+    if (!this.head) {
       this.head = new Node(data);
       return;
     }
@@ -129,8 +140,8 @@ export class LinkedList {
       return;
     }
     const prevNode = this.getAt(index - 1);
-    if(!prevNode) {
-      return
+    if (!prevNode) {
+      return;
     }
     const nextNode = prevNode.next;
     prevNode.next = new Node(data, nextNode);
