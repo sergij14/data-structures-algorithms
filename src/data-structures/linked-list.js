@@ -6,6 +6,8 @@
 // Linked lists have head(points to the first item) and tail(points to the last item)
 // Each item points to the next to the next..., and last one points to null.
 
+import { nodeModuleNameResolver } from "typescript";
+
 ////////////////////////////////////////////////////////////////////
 
 // operation on linked lists
@@ -88,6 +90,15 @@ export class LinkedList {
       fn(node, counter);
       node = node.next;
       counter++;
+    }
+  }
+
+  *[Symbol.iterator](){
+    let node = this.head
+
+    while(node){
+      yield (node);
+      node = node.next;
     }
   }
 

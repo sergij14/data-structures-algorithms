@@ -1,2 +1,3 @@
-# Data structures with JS
-Built some data structures with javascript.
+# Data Structures & Algorithms
+
+Building some data structures with JavaScript and solving several algorithmic tasks.
