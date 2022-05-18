@@ -80,6 +80,22 @@ export class LinkedList {
     this.head = null;
   }
 
+  getAt(num) {
+    const int = num - 1;
+    let node = this.head;
+    let counter = 0;
+
+    while (node) {
+      if (counter === int) {
+        return node.data;
+      }
+      node = node.next;
+      counter++;
+    }
+
+    return null;
+  }
+
   removeFirst() {
     if (!this.head) {
       return;
