@@ -41,5 +41,5 @@ const list = new LinkedList();
 list.insertFirst(5)
 list.insertFirst(3)
 list.insertLast(10);
+list.insertAt(16, 4)
 console.log(list);
-console.log(list.removeAt(1));

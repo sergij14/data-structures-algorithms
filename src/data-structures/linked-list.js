@@ -103,18 +103,33 @@ export class LinkedList {
     if (!this.head) {
       return;
     }
-    
-    if(index === 0){
-      this.head = this.head.next
+
+    if (index === 0) {
+      this.head = this.head.next;
     }
 
     const prevNode = this.getAt(index - 1);
 
-    if(!prevNode || !prevNode.next) {
+    if (!prevNode || !prevNode.next) {
       return;
     }
 
     prevNode.next = prevNode.next.next;
+  }
+
+  insertAt(data, index) {
+    if (index === 0) {
+      const newNode = new Node(data);
+      newNode.next = this.head;
+      this.head = newNode;
+      return;
+    }
+    const node = this.getAt(index - 1);
+    if(!node) {
+      return
+    }
+    const nextNode = node.next;
+    node.next = new Node(data, nextNode);
   }
 
   removeFirst() {
