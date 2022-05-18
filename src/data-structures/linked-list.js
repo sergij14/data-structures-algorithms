@@ -80,13 +80,16 @@ export class LinkedList {
     this.head = null;
   }
 
-  getAt(num) {
-    const int = num - 1;
+  getAt(index) {
+    if(!this.head){
+      return null;
+    }
+
     let node = this.head;
     let counter = 0;
 
     while (node) {
-      if (counter === int) {
+      if (counter === index) {
         return node.data;
       }
       node = node.next;
