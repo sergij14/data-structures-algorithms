@@ -118,18 +118,22 @@ export class LinkedList {
   }
 
   insertAt(data, index) {
+    if(!this.head){
+      this.head = new Node(data);
+      return;
+    }
     if (index === 0) {
       const newNode = new Node(data);
       newNode.next = this.head;
       this.head = newNode;
       return;
     }
-    const node = this.getAt(index - 1);
-    if(!node) {
+    const prevNode = this.getAt(index - 1);
+    if(!prevNode) {
       return
     }
-    const nextNode = node.next;
-    node.next = new Node(data, nextNode);
+    const nextNode = prevNode.next;
+    prevNode.next = new Node(data, nextNode);
   }
 
   removeFirst() {
