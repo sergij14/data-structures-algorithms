@@ -1,7 +1,7 @@
 // finding recurring element in an array
 
 // O (n^2)
-function findRecurring(arr) {
+export function findRecurring(arr) {
   for (let i = 0; i < arr.length; i++) {
     for (let j = i + 1; j < arr.length; j++) {
       if (arr[i] === arr[j]) {
@@ -25,7 +25,6 @@ export function findRecurring2(arr) {
 
   return null;
 }
-
 
 ////////////////////////////////////////////////////////////////////////
 
@@ -76,7 +75,6 @@ export function findFactorialRecursive(num) {
   return num * findFactorialRecursive(num - 1);
 }
 
-
 ////////////////////////////////////////////////////////////////////////
 
 // Sorting array of numbers with bubble sort, removing dublicates
@@ -93,7 +91,6 @@ export function bubbleSort(arr) {
   }
   return [...new Set(arr)];
 }
-
 
 ////////////////////////////////////////////////////////////////////////
 
@@ -121,7 +118,6 @@ export function isPalindrome(str) {
   return str.split("").every((char, i) => char === str[str.length - i - 1]);
 }
 
-
 ////////////////////////////////////////////////////////////////////////
 
 // Reverse Ints
@@ -133,7 +129,6 @@ export function reverseInt(n) {
   }
   return parseInt(reversed);
 }
-
 
 ////////////////////////////////////////////////////////////////////////
 
@@ -161,7 +156,6 @@ export function maxChar(str) {
   return max;
 }
 
-
 ////////////////////////////////////////////////////////////////////////
 
 export function fizzBuzz(n) {
@@ -178,7 +172,6 @@ export function fizzBuzz(n) {
   }
 }
 
-
 ////////////////////////////////////////////////////////////////////////
 
 export function chunkArray(arr, size) {
@@ -192,7 +185,6 @@ export function chunkArray(arr, size) {
   }
   return chunked;
 }
-
 
 ////////////////////////////////////////////////////////////////////////
 // check if two strings are anagrams
@@ -247,7 +239,6 @@ export function areAnagramsWithSort(str1, str2) {
   return generateArrStr(str1) === generateArrStr(str2);
 }
 
-
 ////////////////////////////////////////////////////////////////////////
 
 // REGEX
@@ -267,14 +258,12 @@ export function capitalize(str) {
     .join(" ");
 }
 
-
 ////////////////////////////////////////////////////////////////////////
 
 export function findVowels(str) {
   return str.split("").filter((el) => ["a", "e", "i", "o", "u"].includes(el))
     .length;
 }
-
 
 ////////////////////////////////////////////////////////////////////////
 // Retrieve n-th entry from fibonacci
@@ -288,7 +277,6 @@ export function fibEntry(n) {
 
   return arr[n];
 }
-
 
 ////////////////////////////////////////////////////////////////////////
 
@@ -332,12 +320,23 @@ export function visualizeSteps(n) {
   }
 }
 
-export function printNum(n) {
-  if (n === 0) {
-    return;
+////////////////////////////////////////////////////////////////////////
+
+//pyramid
+
+export function pyramid(n) {
+  const midpoint = Math.floor((2 * n - 1) / 2);
+  for (let row = 0; row < n; row++) {
+    let level = "";
+    for (let col = 0; col < n * 2 - 1; col++) {
+      if (midpoint - row <= col && midpoint + row >= col) {
+        level += "#";
+      } else {
+        level += " ";
+      }
+    }
+    console.log(level);
   }
-  console.log(n);
-  printNum(n - 1);
 }
 
 ////////////////////////////////////////////////////////////////////////
