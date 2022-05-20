@@ -1,5 +1,5 @@
 import "regenerator-runtime/runtime";
-import { pyramid, visualizeSteps } from "./algorithms";
+import { spiralMatrix, } from "./algorithms";
 import { LinkedList } from "./data-structures/linked-list";
 
 const list = new LinkedList();
@@ -12,4 +12,4 @@ for(let node of list){
 }
 
 
-console.log(pyramid(20));
+console.log(spiralMatrix(4));
