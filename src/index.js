@@ -1,5 +1,5 @@
 import "regenerator-runtime/runtime";
-import { spiralMatrix } from "./algorithms";
+import { memoize, memoizedAddTo14, spiralMatrix } from "./algorithms";
 import { LinkedList } from "./data-structures/linked-list";
 import { Node, Tree } from "./data-structures/tree";
 
@@ -10,3 +10,8 @@ node.add(30)
 node.add(50)
 
 console.log(tree.traverseDFS(node => console.log(node)));
+const memoed = memoize((a,b) => a+b);
+
+console.log(memoed(14,5));
+console.log(memoed(14,5));
+console.log(memoed(14,3));

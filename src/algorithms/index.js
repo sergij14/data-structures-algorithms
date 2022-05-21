@@ -279,18 +279,22 @@ export function fibEntry(n) {
 }
 
 ////////////////////////////////////////////////////////////////////////
+// Memoization of the function
 
 export function memoize(fn) {
   const cache = {};
   return function (...args) {
     if (cache[args]) {
-      cache[args];
+      return cache[args];
     }
+    console.log('calculating...', args);
     const result = fn.apply(this, args);
     cache[args] = result;
     return result;
   };
 }
+
+////////////////////////////////////////////////////////////////////////
 
 export function fibEntryRecursive(n) {
   if (n < 2) {
@@ -379,13 +383,14 @@ export function spiralMatrix(n) {
     endRow--;
 
     // start col
-    for(let i = endRow; i >= startRow; i--){
+    for (let i = endRow; i >= startRow; i--) {
       results[i][startCol] = counter;
       counter++;
     }
     startCol++;
-
   }
 
   return results;
 }
+
+////////////////////////////////////////////////////////////////////////
