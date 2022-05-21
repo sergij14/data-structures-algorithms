@@ -9,7 +9,7 @@
 // traverseBFS
 // traverseDFS
 
-class Node {
+export class Node {
   constructor(data) {
     this.data = data;
     this.children = [];
@@ -18,5 +18,9 @@ class Node {
   add(data) {
     const newNode = new Node(data);
     this.children.push(newNode);
+  }
+
+  remove(data) {
+    this.children = this.children.filter((child) => child.data !== data);
   }
 }
