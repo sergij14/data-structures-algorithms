@@ -46,4 +46,14 @@ export class Tree {
       cb(node);
     }
   }
+
+  traverseDFS(cb) {
+    let arr = [this.root];
+
+    while (arr.length) {
+      const node = arr.shift();
+      arr.unshift(...node.children);
+      cb(node);
+    }
+  }
 }
