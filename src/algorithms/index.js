@@ -56,6 +56,8 @@ export function findSumOfEvenInFib(limit) {
 
 //finding factorial of a number, with recursion and iteration
 
+// 0(1) - we operate on one and the same number
+// no new (permanent) value is created per iteration
 export function findFactorialIterative(num) {
   let factorial = 1;
   if (num === 2) {
@@ -68,9 +70,10 @@ export function findFactorialIterative(num) {
   return factorial;
 }
 
+// 0(n) - a new value is created for every function call(parameter received)
 export function findFactorialRecursive(num) {
-  if (num === 2) {
-    return 2;
+  if ((num === 2) | (num === 1)) {
+    return num;
   }
   return num * findFactorialRecursive(num - 1);
 }
@@ -287,7 +290,7 @@ export function memoize(fn) {
     if (cache[args]) {
       return cache[args];
     }
-    console.log('calculating...', args);
+    console.log("calculating...", args);
     const result = fn.apply(this, args);
     cache[args] = result;
     return result;
