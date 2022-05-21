@@ -7,7 +7,14 @@
 // tree constructor should initialize a 'root' property to null.
 
 // traverseBFS
+// iterating on each level of the tree
+// starting from the top
+// from left ot right
+// example: company position hierarchy
+
 // traverseDFS
+// starting from the root,
+// trying to hit at the bottom of the tree
 
 export class Node {
   constructor(data) {
@@ -26,7 +33,17 @@ export class Node {
 }
 
 export class Tree {
-    constructor(){
-        this.root = null
+  constructor() {
+    this.root = null;
+  }
+
+  traverseBFS(cb) {
+    let arr = [this.root];
+
+    while (arr.length) {
+      const node = arr.shift();
+      arr.push(...node.children);
+      cb(node);
     }
+  }
 }

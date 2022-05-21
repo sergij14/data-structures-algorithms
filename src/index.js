@@ -9,4 +9,4 @@ tree.root = node;
 node.add(30)
 node.add(50)
 
-console.log(tree);
+console.log(tree.traverseBFS(node => console.log(node)));
