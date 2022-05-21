@@ -24,3 +24,9 @@ export class Node {
     this.children = this.children.filter((child) => child.data !== data);
   }
 }
+
+export class Tree {
+    constructor(){
+        this.root = null
+    }
+}

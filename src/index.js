@@ -1,11 +1,12 @@
 import "regenerator-runtime/runtime";
 import { spiralMatrix } from "./algorithms";
 import { LinkedList } from "./data-structures/linked-list";
-import { Node } from "./data-structures/tree";
+import { Node, Tree } from "./data-structures/tree";
 
-const treeNode = new Node(20);
+const node = new Node(20);
+const tree = new Tree();
+tree.root = node;
+node.add(30)
+node.add(50)
 
-treeNode.add(30);
-treeNode.add(50);
-treeNode.remove(50)
-console.log(treeNode);
+console.log(tree);
