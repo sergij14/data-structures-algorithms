@@ -1,6 +1,6 @@
 import "regenerator-runtime/runtime";
 import { isPrime, memoize, memoizedAddTo14, spiralMatrix } from "./algorithms";
-import { linearSearh } from "./algorithms/searching";
+import { binarySearch, linearSearh } from "./algorithms/searching";
 import { LinkedList } from "./data-structures/linked-list";
 import { Node, Tree } from "./data-structures/tree";
 
@@ -20,22 +20,4 @@ console.log(memoed(14, 3));
 console.log(isPrime(5));
 
 
-console.log(
-  linearSearh(
-    [
-      {
-        name: "sergi",
-        age: 25,
-      },
-      {
-        name: "nik",
-        age: 27,
-      },
-    ],
-    {
-      name: "nik",
-      age: 27,
-    },
-    (el, item) => el.name === item.name
-  )
-);
+console.log(binarySearch([1,5,6,7,8,9], 7));
