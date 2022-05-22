@@ -2,6 +2,7 @@
 // checks every element in the array, first time sees value, returns it
 // works on sorted and unsorted lists
 
+// 0(n) - in the worst case we have to visit all of the item if an item is in the end of array
 export function linearSearh(arr, el, comparatorFn) {
   let idx = 0;
 
