@@ -6,9 +6,17 @@
 // 0(n) - higher n leads to a linear increase in runtime
 // if we have at least one loop there most likely we have 0(n)
 
+// 0(n^2) - quadratic time complexity
+// if we have a nested for loops
+
+// 0(log n) - logarithmic time complexity
+// example: isPowerOfTwo()
+
+// 0(2^n) - exponential time complexity
+// example: fibEntryRecursive()
+
 // 0(1) - higher n does not effect runtime
 // if we have a fn without function calls or loops, most likely we have big 0(1)
-
 
 ////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////
@@ -314,6 +322,7 @@ export function memoize(fn) {
 
 ////////////////////////////////////////////////////////////////////////
 
+// 0(2^n)
 export function fibEntryRecursive(n) {
   if (n < 2) {
     return n;
@@ -419,5 +428,25 @@ export function isPrime(num) {
       return false;
     }
   }
+  return true;
+}
+
+////////////////////////////////////////////////////////////////////////
+
+// 0(log n)
+export function isPowerOfTwo(num) {
+  if (num < 1) {
+    return false;
+  }
+
+  let dividedNum = num;
+
+  while (dividedNum !== 1) {
+    if (dividedNum % 2 !== 0) {
+      return false;
+    }
+    dividedNum = dividedNum / 2;
+  }
+
   return true;
 }
