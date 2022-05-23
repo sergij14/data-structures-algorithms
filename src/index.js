@@ -1,6 +1,6 @@
 import "regenerator-runtime/runtime";
 import { isPrime, memoize, memoizedAddTo14, spiralMatrix } from "./algorithms";
-import { binarySearch, linearSearh } from "./algorithms/searching";
+import { binarySearch, binarySearchRecursive, linearSearh } from "./algorithms/searching";
 import { LinkedList } from "./data-structures/linked-list";
 import { Node, Tree } from "./data-structures/tree";
 
@@ -20,4 +20,4 @@ console.log(memoed(14, 3));
 console.log(isPrime(5));
 
 
-console.log(binarySearch([1,5,6,7,8,9], 7));
+console.log(binarySearchRecursive([1,5,6,7,8,9], 7, 0));
