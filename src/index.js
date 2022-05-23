@@ -5,7 +5,7 @@ import {
   binarySearchRecursive,
   linearSearh,
 } from "./algorithms/searching";
-import { bubbleSort } from "./algorithms/sorting";
+import { bubbleSort, quickSort } from "./algorithms/sorting";
 import { LinkedList } from "./data-structures/linked-list";
 import { Node, Tree } from "./data-structures/tree";
 
@@ -24,4 +24,4 @@ console.log(memoed(14, 3));
 
 console.log(isPrime(5));
 
-console.log(bubbleSort([1, 3, 4, 5, 6, -56, 7, 3456, 76, 234234]));
+console.log(quickSort([1, 3, 4, 5, 6, -56, 7, 3456, 76, 234234]));
