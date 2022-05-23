@@ -56,12 +56,12 @@ export function binarySearch(arr, el) {
 }
 
 // Binary search with recursion
+// 0(log n) - splitting the problem every time
 
 export function binarySearchRecursive(arr, el, offset) {
   let startIdx = 0;
   let endIdx = arr.length - 1;
 
-  console.log(arr, el);
   let mid = Math.floor((startIdx + endIdx) / 2);
 
   if (arr[mid] === el) {
