@@ -1,27 +1,13 @@
 import "regenerator-runtime/runtime";
-import { isPrime, memoize, memoizedAddTo14, spiralMatrix } from "./algorithms";
-import {
-  binarySearch,
-  binarySearchRecursive,
-  linearSearh,
-} from "./algorithms/searching";
-import { bubbleSort, quickSort } from "./algorithms/sorting";
-import { LinkedList } from "./data-structures/linked-list";
-import { Node, Tree } from "./data-structures/tree";
+import { Node } from "./data-structures/binary-search-tree";
 
-const node = new Node(20);
-const tree = new Tree();
-tree.root = node;
-node.add(30);
-node.add(50);
 
-console.log(tree.traverseDFS((node) => console.log(node)));
-const memoed = memoize((a, b) => a + b);
+const tree = new Node(10);
+tree.insert(5)
+tree.insert(15)
+tree.insert(-3)
+tree.insert(8)
 
-console.log(memoed(14, 5));
-console.log(memoed(14, 5));
-console.log(memoed(14, 3));
 
-console.log(isPrime(5));
-
-console.log(quickSort([1, 3, 4, 5, 6, -56, 7, 3456, 76, 234234]));
+console.log(tree);
+console.log(tree.contains(5));

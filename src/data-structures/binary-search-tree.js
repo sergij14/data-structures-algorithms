@@ -12,7 +12,7 @@
 // Node class
 // constructor initializes valies 'data', 'left', 'right'
 
-class Node {
+export class Node {
   constructor(data) {
     this.data = data;
     this.left = null;
@@ -20,18 +20,28 @@ class Node {
   }
 
   insert(data) {
-    const newNode = new Node(data);
-
     if (data < this.data && this.left) {
-      this.left.insert(newNode);
+      this.left.insert(data);
     } else if (data < this.data) {
-      this.left = newNode;
+      this.left = new Node(data);
+    } else if (data > this.data && this.right) {
+      this.right.insert(data);
+    } else if (data > this.data) {
+      this.right = new Node(data);
+    }
+  }
+
+  contains(data) {
+    if (data === this.data) {
+      return this;
     }
 
-    if (data > this.data && this.right) {
-      this.right.insert(newNode);
-    } else if (data > this.data) {
-      this.right = newNode;
+    if (this.data > data && this.left) {
+      return this.left.contains(data);
+    } else if (this.data < data && this.right) {
+      return this.right.contains(data);
     }
+
+    return null;
   }
 }
