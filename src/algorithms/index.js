@@ -1,7 +1,7 @@
 ////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////
 
-// BIG 0
+// BIG 0 - time complexity
 
 // 0(n) - higher n leads to a linear increase in runtime
 // if we have at least one loop there most likely we have 0(n)
@@ -434,3 +434,21 @@ export function isPowerOfTwo(num) {
 
   return true;
 }
+
+
+////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////
+
+// BIG 0 - space complexity
+// how much space in memory does algorithm occupy
+// how the space grows, providing bigger inputs
+
+// we don't have to worry about memory too much.
+
+// to find space complexity
+// 1. find places where data is stored permanently(for exaple if we have a loop, it survives that loop) in algorithms
+// 2. count how often such permanently stored values are being created(and kept)
+// 3. determine how the number of values depends on your n
+
+////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////
