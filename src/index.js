@@ -1,5 +1,6 @@
 import "regenerator-runtime/runtime";
 import { Node } from "./data-structures/binary-search-tree";
+import { Eventing } from "./eventing";
 
 const tree = new Node(10);
 tree.insert(5);
